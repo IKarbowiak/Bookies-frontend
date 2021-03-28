@@ -8,7 +8,8 @@ export const Welcome = () => (
       </p>
       <p>
        <Link to="/login">Log in</Link> <br/>
-       <Link to="/sign-in">Sign in</Link>
+       <Link to="/sign-in">Sign in</Link> <br/>
+       <Link to="/books">Book list</Link>
       </p>
     </div>
   </div>

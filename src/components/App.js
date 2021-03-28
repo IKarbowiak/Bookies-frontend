@@ -5,6 +5,7 @@ import '../App.css'
 import {LoginWindow} from './LoginWindow'
 import SignInWindow from './SignInWindow'
 import {Welcome} from './Welcome'
+import {Books} from './Books'
 
 
 // Initialize Apollo client
@@ -24,6 +25,7 @@ function App() {
             <Route exact path="/" component={Welcome}/>
             <Route path="/login" component={LoginWindow}/>
             <Route path="/sign-in" component={SignInWindow}/>
+            <Route path="/books" component={Books}/>
           </Switch>
       </div>
     </ApolloProvider>
