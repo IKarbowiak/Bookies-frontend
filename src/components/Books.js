@@ -69,12 +69,12 @@ const BookItem = ({book_data}) => {
   const {book, author} = book_data
   const {id, title, year, description, cover} = book
   return (
-    <Card key={id} style={{ flex: 'auto', maxWidth: '15%', height: '700px', objectFit: 'contain', margin: "20px 10px"}}>
-      <Card.Img variant="top" src={cover} style={{maxWidth: '100%', maxHeight: '100%', padding:"10%"}}/>
+    <Card key={id} style={{height: "600px", maxWidth: "300px", minWidth: "300px", margin: "10px 10px"}}>
+      <Card.Img variant="top" src={cover} style={{maxWidth: '70%', maxHeight: '70%', padding:"10%", margin: "0 auto"}}/>
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">Written by {author.name}</Card.Subtitle>
-        <Card.Text style={{maxHeight: '70%', overflow: 'auto'}}>
+        <Card.Text style={{maxHeight: '70%', overflow: "auto"}}>
           {description}
         </Card.Text>
       </Card.Body>
@@ -88,10 +88,12 @@ const BookItem = ({book_data}) => {
 
 export const Books = () => {
   return (
-    <CardDeck style={{display: 'flex', flexDirection: 'wrap', justifyContent: 'center'}}>
-      <BooksList />
-      <Link style={{clear: "auto"}} to="/">Back</Link>
-    </CardDeck>
+    <div>
+      <CardDeck style={{display: "flex", flexWrap: "wrap", alignItems: "stretch", padding: "10px", margin: "0 auto"}}>
+        <BooksList />
+      </CardDeck>
+      <Link to="/">Back</Link>
+    </div>
   )
 }
 
